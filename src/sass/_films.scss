@@ -1,0 +1,87 @@
+.film__menu{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.film__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+.film__block{
+  width: 274px;
+  height: 439px;
+  margin: 30px;
+}
+@media screen and (max-width: 320px){
+  .film__block{
+    margin:20px;
+  }
+}
+.film__image{
+  border-radius: 5px;
+}
+.film__block__text{
+  height: 30px;
+}
+.film__block__grade{
+  display: flex;
+}
+.film__title{
+  margin: 10px 0px 0px 0px;
+}
+.film__info{
+  color: #FF6B08;
+  margin: 0px;
+}
+.pages{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next__btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F7F7F7;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+.next__svg{
+  width: 16px;
+  height: 16px;
+}
+.nextr__svg {
+  width: 16px;
+  height: 16px;
+  transform: rotateY(180deg);
+}
+.pagination__placeholder{
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+  background-color: #FF6B08;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+}
+@media screen and (max-width:320px) {
+  .pagination__placeholder{
+    width: 200px;
+    padding-top: 2px;
+  }
+}
+.grade{
+  margin-left: 10px;
+  text-align: center;
+  width: 36px;
+  height: 16px;
+  background: #FF6B01;
+  border-radius: 5px;
+  color: #fff;
+}

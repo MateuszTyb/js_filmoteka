@@ -1,0 +1,30 @@
+$colors: (
+  'primary': #ffffff,
+);
+.text__regular{
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 16px;
+  line-height: 100%;
+}
+.text__normal{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.text__medium{
+  font-family: Roboto;
+  font-style: Medium;
+  font-size: 30px;
+  line-height: 35px;
+}
+.text__sm{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
