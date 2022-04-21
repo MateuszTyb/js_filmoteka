@@ -9,7 +9,7 @@
   refs.closeModalBtn.addEventListener("click", toggleModal);
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      toggleModal()
+      refs.modal.classList.add("is-hidden");
     }
   });
 
