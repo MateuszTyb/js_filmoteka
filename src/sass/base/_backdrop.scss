@@ -1,0 +1,16 @@
+.backdrop {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  padding: 20px 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: scale(1);
+  transition-duration: 500ms;
+  transition-property: inherit;
+  width: 100%;
+  z-index: 10;
+}

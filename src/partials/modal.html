@@ -1,0 +1,43 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close-btn" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="./images/close-btn.svg#icon-Vector"></use>
+      </svg>
+    </button>
+    <div class="movie"></div>
+    <div class="modal__movie-info">
+      <h3 class="modal__movie-title"></h3>
+      <div class="modal__categories">
+        <div class="modal__categories-left">
+          <ul class="modal__categories-left-list">
+            <li class="modal__category-left-item">Vote / Votes</li>
+            <li class="modal__category-left-item">Popularity</li>
+            <li class="modal__category-left-item">Original Title</li>
+            <li class="modal__category-left-item">Genre</li>
+          </ul>
+        </div>
+        <div class="modal__categories-right">
+          <ul class="modal__categories-right-list">
+            <li class="modal__category-right-item double">
+              <p class="vote"></p>
+              <p class="slash">/</p>
+              <p class="votes"></p>
+            </li>
+            <li class="modal__category-right-item popularity"></li>
+            <li class="modal__category-right-item orginal-title"></li>
+            <li class="modal__category-right-item genre"></li>
+          </ul>
+        </div>
+      </div>
+      <h4 class="modal__about-header">About</h4>
+      <p class="modal__about"></p>
+      <div class="modal__buttons">
+        <button class="modal__add-btn watched" type="button">
+          Add to watched
+        </button>
+        <button class="modal__add-btn queue" type="button">Add to queue</button>
+      </div>
+    </div>
+  </div>
+</div>

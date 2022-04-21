@@ -1,0 +1,240 @@
+.container-header {
+  margin-top: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-background_m.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 230px;
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  &.students-active {
+    overflow: hidden;
+  }
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  &__title {
+    display: none;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin-left: auto;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      margin-right: 20px;
+      margin-top: 58px;
+
+      &:not(:last-child) {
+        margin-right: 39px;
+        position: relative;
+
+        &::after {
+          border: 1px solid $details-color;
+          content: "";
+          height: 0;
+          left: 0;
+          margin: 0;
+          position: absolute;
+          position: absolute;
+          top: 15px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $main-color;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $main-color;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+    color: $main-color;
+    width: 100%;
+    display: block;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::placeholder {
+      color: $main-color;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    &--search {
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      right: 5px;
+      top: 3px;
+      cursor: pointer;
+    }
+
+    &--film {
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      top: 55px;
+      left: 21px;
+      cursor: pointer;
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+  }
+
+  &__error {
+    margin-top: 22px;
+    display: none;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+
+    color: #ff001b;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-background_t.png");
+  }
+
+  .header {
+    &__title {
+      color: $main-color;
+      display: flex;
+      width: 141px;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 35px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: absolute;
+      left: 105px;
+      top: 55px;
+    }
+
+    &__list {
+      &__item {
+        margin-right: 76px;
+      }
+    }
+
+    &__input {
+      width: 336px;
+    }
+
+    &__search {
+      margin-top: 50px;
+    }
+
+    &__icon {
+      &--search {
+        left: 321px;
+      }
+
+      &--film {
+        left: 71px;
+        top: 61px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-background_d.png");
+  }
+
+  .header {
+    &__title {
+      color: $main-color;
+      display: flex;
+      width: 141px;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 35px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: absolute;
+      left: 105px;
+      top: 55px;
+    }
+
+    &__icon {
+      &--search {
+        left: 321px;
+      }
+
+      &--film {
+        left: 71px;
+        top: 61px;
+      }
+    }
+
+    &__list {
+      &__item {
+        margin-right: 76px;
+      }
+    }
+
+    &__input {
+      width: 336px;
+    }
+
+    &__search {
+      margin-top: 50px;
+    }
+  }
+}
