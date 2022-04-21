@@ -7,6 +7,11 @@
 
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      refs.modal.classList.add("is-hidden");
+    }
+  });
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
