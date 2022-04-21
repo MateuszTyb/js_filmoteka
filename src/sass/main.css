@@ -747,15 +747,6 @@ body.students-active {
   padding-right: 20px;
 }
 
-.library__div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .library__icon {
   margin-top: 56px;
 }
@@ -763,6 +754,30 @@ body.students-active {
 .library__name {
   color: transparent;
   display: inline-block;
+}
+
+.library__span {
+  display: inline-block;
+  -webkit-animation: flip 2s infinite;
+          animation: flip 2s infinite;
+  -webkit-animation-delay: calc(.2s * var(--i));
+          animation-delay: calc(.2s * var(--i));
+}
+
+@-webkit-keyframes flip {
+  0%,
+  80% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 .library__navigation {
