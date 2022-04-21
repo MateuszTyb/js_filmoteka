@@ -1,8 +1,8 @@
 {
-  "name": "js_filmoteka",
+  "name": "JS_Filmoteka",
   "version": "1.1.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "homepage": "https://mateusztyb.github.io/JS_Filmoteka",
   "scripts": {
     "dev": "parcel src/*.html",
