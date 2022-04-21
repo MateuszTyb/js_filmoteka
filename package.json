@@ -6,7 +6,7 @@
   "homepage": "https://mateusztyb.github.io/JS_Filmoteka",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /js_filmoteka/"
+    "build": "parcel build src/*.html --public-url /JS_Filmoteka/"
   },
   "repository": {
     "type": "git",
