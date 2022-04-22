@@ -21,16 +21,41 @@
   </head>
 
   <body>
-    <div class="spinner"></div>
-
-    <include src="./partials/menu.html"></include>
-    <include src="./partials/gallery.html"></include>
-    <include src="./partials/pagination.html"></include>
-    <include src="./partials/footer.html"></include>
-    <include src="./partials/modal.html"></include>
-    <div id="students-container">
-      <h1>tutaj elementy ktore maja byc wyswietlane w studnets modal</h1>
+    <div class="students-content">
+      <div class="spinner"></div>
+      <include src="./partials/menu.html"></include>
+      <include src="./partials/gallery.html"></include>
+      <include src="./partials/pagination.html"></include>
+      <include src="./partials/footer.html"></include>
+      <include src="./partials/modal.html"></include>
     </div>
+
+    <div id="students-container">
+      <div class="students-background">
+        <div class="students">
+          <h2>Studenci GoIT:</h2>
+          <div class="students-list">
+            <div class="students-list__item">
+              <div class="students-name">Mateusz</div>
+            </div>
+            <div class="students-list__item">
+              <div class="students-name">Łukasz</div>
+            </div>
+            <div class="students-list__item">
+              <div class="students-name">Adrian</div>
+            </div>
+            <div class="students-list__item">
+              <div class="students-name">Alicja</div>
+            </div>
+            <div class="students-list__item">
+              <div class="students-name">Mikołaj</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/students-modal.js"></script>
     <script src="./js/fetcher.js"></script>
     <script src="./js/gallery.js"></script>
     <script src="./js/movieData.js"></script>

@@ -6,15 +6,15 @@ studentContainer.addEventListener('click', closeModal);
 
 function openModal() {
     modalContainer.removeAttribute('.class');
-    modalContainer.classList.add('class-visible');
-    document.body.classList.add('class-active');
+    modalContainer.classList.add('visible');
+    document.body.classList.add('students-active');
   }
 
   function closeModal() {
-    modalContainer.classList.add('class-hidden');
-    document.body.classList.remove('class-active');
+    modalContainer.classList.add('unvisible');
+    document.body.classList.remove('students-active');
     setTimeout(() => {
-    modalContainer.classList.remove('class-visible');
-    modalContainer.classList.remove('class-hidden');
+    modalContainer.classList.remove('visible');
+    modalContainer.classList.remove('unvisible');
     }, 2000);
   }
