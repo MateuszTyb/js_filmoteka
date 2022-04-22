@@ -5,16 +5,16 @@ studentButton.addEventListener('click', openModal);
 studentContainer.addEventListener('click', closeModal);
 
 function openModal() {
-    modalContainer.removeAttribute('.class');
-    modalContainer.classList.add('visible');
+    studentContainer.removeAttribute('.class');
+    studentContainer.classList.add('visible');
     document.body.classList.add('students-active');
   }
 
   function closeModal() {
-    modalContainer.classList.add('unvisible');
+    studentContainer.classList.add('unvisible');
     document.body.classList.remove('students-active');
     setTimeout(() => {
-    modalContainer.classList.remove('visible');
-    modalContainer.classList.remove('unvisible');
+    studentContainer.classList.remove('visible');
+    studentContainer.classList.remove('unvisible');
     }, 2000);
   }
