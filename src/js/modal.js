@@ -20,4 +20,22 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
+
+  let currentCard
+  window.onclick = (e) => {
+    console.log(e.target.parentNode.parentNode);
+      currentCard = e.target.parentNode.parentNode;
+  }
+
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      currentCard.nextElementSibling.firstElementChild.click();
+      toggleModal();
+      }
+    }
+  );
+
+  
+
 })();
