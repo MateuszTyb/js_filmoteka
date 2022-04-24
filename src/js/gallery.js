@@ -118,10 +118,10 @@ async function fetchImages(page) {
   spinner.spin(target);
   try {
     IDS = await axios.get(
-      "https://api.themoviedb.org/3/genre/movie/list?api_key=130c7a7ecd86dbb286ae26c3cdcca88c&language=en-US"
+      "https://api.themoviedb.org/3/genre/movie/list?api_key=7f0b2ade8b1437f0cdd83125131889c8&language=en-US"
     );
     const res = await axios.get(
-      `https://api.themoviedb.org/3/trending/movie/week?api_key=130c7a7ecd86dbb286ae26c3cdcca88c&page=${page}`
+      `https://api.themoviedb.org/3/trending/movie/week?api_key=7f0b2ade8b1437f0cdd83125131889c8&page=${page}`
     );
     building(res.data.results);
     spinner.stop();
@@ -142,7 +142,7 @@ async function fetchMovies(name, page) {
   spinner.spin(target);
   try {
     const res = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=130c7a7ecd86dbb286ae26c3cdcca88c&query=${name}&page=${page}`
+      `https://api.themoviedb.org/3/search/movie?api_key=7f0b2ade8b1437f0cdd83125131889c8&query=${name}&page=${page}`
     );
     if (res.data.results.length === 0) {
       return (noResults.style.display = "flex");
@@ -161,7 +161,7 @@ async function fetchMoviesByName(name) {
   spinner.spin(target);
   try {
     const res = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=130c7a7ecd86dbb286ae26c3cdcca88c&query=${name}`
+      `https://api.themoviedb.org/3/search/movie?api_key=7f0b2ade8b1437f0cdd83125131889c8&query=${name}`
     );
     if (res.data.results.length === 0) {
       return (noResults.style.display = "flex");
