@@ -8,6 +8,8 @@
   line-height: 1.333;
   padding: 0;
   width: 40px;
+  margin: 5px;
+
 
   &:hover {
     cursor: pointer;
@@ -17,7 +19,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin: 10px auto 10px;
 
   &_buttons {
     display: flex;
@@ -48,7 +50,7 @@
 
 @media screen and (min-width: 768px) {
   .pagination {
-    margin-bottom: 60px;
+    margin: 10px auto 10px;
 
     &_hider {
       align-items: baseline;
