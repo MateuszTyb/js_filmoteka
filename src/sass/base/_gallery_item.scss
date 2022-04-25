@@ -13,6 +13,7 @@
         width: 280px;
         height: 398px;
         border-radius: 5px;
+        object-fit: cover;
 
         &:hover {
             animation-name: pulse;
