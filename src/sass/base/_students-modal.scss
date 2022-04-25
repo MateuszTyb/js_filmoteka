@@ -27,6 +27,10 @@
     }
   }
 
+
+
+
+
   .students-background {
     display: table-cell;
     background: rgba(0, 0, 0, 0.8);
@@ -80,6 +84,42 @@
         line-height: 24px;
         color: rgb(67, 0, 94);
         text-shadow: 1px 1px 2px white;
+      }
+
+      &-position {
+        font-size: 16px;
+        line-height: 1.1875;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color:black;
+      }
+
+      &-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: #afb1b8;
+        color: #afb1b8;
+        background-color: #ffffff;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        margin: 16px 5px 0px;
+      }
+
+      &-social-links:hover,
+      &-social-links:focus {
+        background-color: var(--secondary-color);
+        fill: #ffffff;
+        color: #ffffff;
+        transition: color fill background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
   }
