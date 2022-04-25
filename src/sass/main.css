@@ -110,6 +110,8 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -318,8 +320,8 @@ li {
     margin-top: 23px;
   }
   .modal__movie-photo {
-    min-width: 396px;
-    max-height: 477.8px;
+    min-width: 345px;
+    height: 478px;
     margin-top: 0;
   }
   .modal__movie-title {

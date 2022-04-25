@@ -80,6 +80,7 @@
 
 .modal__movie-photo {
   display: flex;
+  object-fit: cover;
   justify-content: center;
   width: 100%;
   border-radius: 5px;
@@ -262,8 +263,8 @@
   }
 
   .modal__movie-photo {
-    min-width: 396px;
-    max-height: 477.8px;
+    min-width: 345px;
+    height: 478px;
     margin-top: 0;
   }
 
