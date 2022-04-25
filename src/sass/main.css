@@ -68,7 +68,7 @@ li {
 .arrow {
   position: absolute;
   cursor: pointer;
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 1px -1px 0 1px #ff6b01 inset;
   -webkit-box-shadow: 2px -2px #ff6b01 inset;
   border: solid transparent;
@@ -274,6 +274,12 @@ li {
     display: flex;
     padding: 30px 30px;
   }
+  .modal__prev-btn {
+    left: -10%;
+  }
+  .modal__next-btn {
+    right: -10%;
+  }
   .modal__movie-info {
     margin-left: 32px;
   }
@@ -312,6 +318,12 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .modal__prev-btn {
+    left: -10%;
+  }
+  .modal__next-btn {
+    right: -10%;
   }
   .modal__movie-info {
     margin-left: 30px;
@@ -925,6 +937,30 @@ body.students-active {
   margin-top: 56px;
 }
 
+.library__span {
+  display: inline-block;
+  -webkit-animation: flip 2s infinite;
+          animation: flip 2s infinite;
+  -webkit-animation-delay: calc(.2s * var(--i));
+          animation-delay: calc(.2s * var(--i));
+}
+
+@-webkit-keyframes flip {
+  0%,
+  80% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 .library__name {
   color: transparent;
   display: inline-block;
@@ -1465,6 +1501,7 @@ body.students-active {
   color: #43005e;
   text-shadow: 1px 1px 2px white;
 }
+
 #students-container .students-background .students-position {
   font-size: 16px;
   line-height: 1.1875;
@@ -1472,15 +1509,29 @@ body.students-active {
   letter-spacing: 0.03em;
   color: black;
 }
+
 #students-container .students-background .students-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #students-container .students-background .students-social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   fill: #afb1b8;
   color: #afb1b8;
   background-color: #ffffff;
@@ -1489,13 +1540,17 @@ body.students-active {
   border-radius: 50%;
   margin: 16px 5px 0px;
 }
+
 #students-container .students-background .students-social-links:hover, #students-container .students-background .students-social-links:focus {
   background-color: lightblue;
   fill: #ffffff;
   color: #ffffff;
+  -webkit-transition: color fill background-color;
   transition: color fill background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @-webkit-keyframes unfoldIn {
