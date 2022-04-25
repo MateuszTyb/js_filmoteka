@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nagłówek strony</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
+    <title>My library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../sass/main.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="library">
-      <div class="container">
-        <div class="library__div">
-          <a href="../index.html">
-            <h2 class="library__name">
-              <svg class="library__icon" width="24" height="24" alt="film">
+        <div class="container">
+            <div class="library__div">
+                <a href="../index.html">
+                    <h2 class="library__name">
+                        <svg class="library__icon" width="24" height="24" alt="film">
                 <use href="../images/film.svg#icon-film"></use>
               </svg>
-              Filmoteka
-            </h2>
-          </a>
-          <naw class="library__navigation">
-            <ul class="library__navigation-list">
-              <li class="library__navigation-item">
-                <a class="library__navigation-link" href="../index.html"
-                  >Home</a
+                        <span class="library__span" style="--i:1">F</span>
+                        <span class="library__span" style="--i:2">i</span>
+                        <span class="library__span" style="--i:3">l</span>
+                        <span class="library__span" style="--i:4">m</span>
+                        <span class="library__span" style="--i:5">o</span>
+                        <span class="library__span" style="--i:6">t</span>
+                        <span class="library__span" style="--i:7">e</span>
+                        <span class="library__span" style="--i:8">k</span>
+                        <span class="library__span" style="--i:9">a</span>
+                    </h2>
+                </a>
+                <naw class="library__navigation">
+                    <ul class="library__navigation-list">
+                        <li class="library__navigation-item">
+                            <a class="library__navigation-link" href="../index.html">Home</a
                 >
               </li>
               <li
@@ -67,11 +68,164 @@
     </div>
 
     <div class="spinner"></div>
-    <include src="./partials/footer.html"></include>
-    <include src="./partials/modal-lib.html"></include>
+    <div id="students-container">
+      <div class="students-background">
+        <div class="students">
+          <h2>Studenci GoIT:</h2>
+          <div class="students-list">
+            <div class="students-list__item">
+              <img class="students-picture" src="../images/icons/publicdomainq-worker.svg" alt="">
+              <div class="students-name">Mateusz</div>
+              <p class="students-position">Marketing</p>
+              <ul class="students-social list">
+                 <li class="students-social-links">
+                  <a href="tweter">
+                     <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-tweter">
+                     </svg>
+                  </a>
+                        </li>
+                        <li class="students-social-links">
+                            <a href="facebook">
+                                <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-facebook">
+                     </svg>
+                            </a>
+                        </li>
+                        <li class="students-social-links">
+                            <a href="linkedin">
+                                <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-linkedin">
+                     </svg>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="students-list__item">
+                <img class="students-picture" src="../images/icons/publicdomainq-user.svg" alt="">
+                <div class="students-name">Łukasz</div>
+                <p class="students-position">Marketing</p>
+                <ul class="students-social list">
+                    <li class="students-social-links">
+                        <a href="tweter">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-tweter">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="facebook">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-facebook">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="linkedin">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-linkedin">
+                     </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="students-list__item">
+                <img class="students-picture" src="../images/icons/exhausted_computer_user.svg" alt="">
+                <div class="students-name">Adrian</div>
+                <p class="students-position">Marketing</p>
+                <ul class="students-social list">
+                    <li class="students-social-links">
+                        <a href="tweter">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-tweter">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="facebook">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-facebook">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="linkedin">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-linkedin">
+                     </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="students-list__item">
+                <img class="students-picture" src="../images/icons/exhausted_computer_user2.svg" alt="">
+                <div class="students-name">Alicja</div>
+                <p class="students-position">Marketing</p>
+                <ul class="students-social list">
+                    <li class="students-social-links">
+                        <a href="tweter">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-tweter">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="facebook">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-facebook">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="linkedin">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-linkedin">
+                     </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="students-list__item">
+                <img class="students-picture" src="../images/icons/sleeping_user.svg" alt="">
+                <div class="students-name">Mikołaj</div>
+                <p class="students-position">Marketing</p>
+                <ul class="students-social list">
+                    <li class="students-social-links">
+                        <a href="tweter">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-tweter">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="facebook">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-facebook">
+                     </svg>
+                        </a>
+                    </li>
+                    <li class="students-social-links">
+                        <a href="linkedin">
+                            <svg class="employee-icon" width=20 height=20>
+                        <use href="../images/icons.svg#icon-linkedin">
+                     </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
 
-    <script src="../js/library.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../index.js"></script>
-  </body>
+
+        <include src="./partials/footer.html"></include>
+        <include src="./partials/modal-lib.html"></include>
+        <script src="../js/students-modal.js"></script>
+        <script src="../js/library.js"></script>
+        <script src="../js/modal.js"></script>
+        <script src="../index.js"></script>
+        <script src="../js/students-modal.js"></script>
+</body>
+
 </html>

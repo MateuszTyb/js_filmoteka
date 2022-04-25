@@ -1463,6 +1463,38 @@ body.students-active {
   color: #43005e;
   text-shadow: 1px 1px 2px white;
 }
+#students-container .students-background .students-position {
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: black;
+}
+#students-container .students-background .students-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#students-container .students-background .students-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  color: #afb1b8;
+  background-color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 16px 5px 0px;
+}
+#students-container .students-background .students-social-links:hover, #students-container .students-background .students-social-links:focus {
+  background-color: lightblue;
+  fill: #ffffff;
+  color: #ffffff;
+  transition: color fill background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 @-webkit-keyframes unfoldIn {
   0% {
