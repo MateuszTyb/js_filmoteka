@@ -34,7 +34,6 @@ li {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   max-height: calc(100vh - 40px);
-  overflow-y: auto;
 }
 
 .modal__close-btn,
@@ -50,6 +49,57 @@ li {
   border: none;
   cursor: pointer;
   background-color: #ffffff;
+}
+
+.modal__prev-btn,
+.modal__next-btn {
+  position: absolute;
+  top: 40%;
+}
+
+.modal__prev-btn {
+  left: -15%;
+}
+
+.modal__next-btn {
+  right: -15%;
+}
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  padding: 3rem;
+  box-shadow: 1px -1px 0 1px #ff6b01 inset;
+  -webkit-box-shadow: 2px -2px #ff6b01 inset;
+  border: solid transparent;
+  border-width: 0 0 2rem 2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  box-shadow: 2px -2px 0 2px #fff inset;
+  -webkit-box-shadow: 4px -4px #fff inset;
+}
+
+.arrow-up {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.arrow-right {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.arrow-down {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arrow-left {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .movie {
