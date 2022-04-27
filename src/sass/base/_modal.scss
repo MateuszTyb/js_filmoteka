@@ -10,7 +10,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   max-height: calc(100vh - 40px);
-  overflow-y: auto;
+  // overflow-y: auto;
 }
 
 .modal__close-btn,
@@ -28,12 +28,59 @@
   background-color: $main-color;
 }
 
+.modal__prev-btn,
+.modal__next-btn {
+  position: absolute;
+  top: 40%;
+}
+
+.modal__prev-btn {
+  left: -15%;
+}
+
+.modal__next-btn {
+  right: -15%;
+}
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  padding: 2rem;
+  box-shadow: 1px -1px 0 1px #ff6b01 inset;
+  -webkit-box-shadow: 2px -2px #ff6b01 inset;
+  border: solid transparent;
+  border-width: 0 0 2rem 2rem;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  box-shadow: 2px -2px 0 2px #fff inset;
+  -webkit-box-shadow: 4px -4px #fff inset;
+}
+
+.arrow-up {
+  transform: rotate(135deg)
+}
+
+.arrow-right {
+  transform: rotate(225deg)
+}
+
+.arrow-down {
+  transform: rotate(-45deg)
+}
+
+.arrow-left {
+  transform: rotate(45deg)
+}
+
 .movie {
   margin-top: 40px;
 }
 
 .modal__movie-photo {
   display: flex;
+  object-fit: cover;
   justify-content: center;
   width: 100%;
   border-radius: 5px;
@@ -167,6 +214,14 @@
     padding: 30px 30px;
   }
 
+  .modal__prev-btn {
+    left: -10%;
+  }
+  
+  .modal__next-btn {
+    right: -10%;
+  }
+
   .modal__movie-info {
     margin-left: 32px;
   }
@@ -207,6 +262,14 @@
     display: flex;
   }
 
+  .modal__prev-btn {
+    left: -10%;
+  }
+  
+  .modal__next-btn {
+    right: -10%;
+  }
+
   .modal__movie-info {
     margin-left: 30px;
   }
@@ -216,8 +279,8 @@
   }
 
   .modal__movie-photo {
-    min-width: 396px;
-    max-height: 477.8px;
+    min-width: 345px;
+    height: 478px;
     margin-top: 0;
   }
 
