@@ -406,17 +406,20 @@ li {
 
 .gallery {
   grid-row-gap: 30px;
-  margin: 20px auto 40px auto;
+  padding: 20px 40px 40px 40px;
   max-width: 280px;
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .gallery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    margin: 50px auto 60px auto;
+    -ms-grid-columns: auto max-content;
+        grid-template-columns: auto -webkit-max-content;
+        grid-template-columns: auto max-content;
+    padding: 50px 60px 60px 60px;
     max-width: 616px;
   }
 }
@@ -425,9 +428,10 @@ li {
   .gallery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
-    margin: 60px auto 50px auto;
+    -ms-grid-columns: auto auto max-content;
+        grid-template-columns: auto auto -webkit-max-content;
+        grid-template-columns: auto auto max-content;
+    padding: 60px 100px 50px 100px;
     max-width: 882px;
   }
 }
@@ -440,16 +444,12 @@ li {
   margin-bottom: 20px;
 }
 
-.movie-picture {
-  width: 280px;
-  height: 398px;
-  border-radius: 5px;
-}
-
 .movie-img {
   width: 280px;
   height: 398px;
   border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .movie-img:hover {
@@ -520,13 +520,9 @@ li {
 
 @media screen and (min-width: 768px) {
   .movie-card {
-    width: 239px;
+    width: 293px;
     height: 439px;
     margin: 0;
-  }
-  .movie-picture {
-    width: 293px;
-    height: 398px;
   }
   .movie-img {
     width: 293px;
@@ -539,9 +535,6 @@ li {
 
 @media screen and (min-width: 1024px) {
   .movie-card {
-    width: 274px;
-  }
-  .movie-picture {
     width: 274px;
   }
   .movie-img {
@@ -672,6 +665,9 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body.students-active {
@@ -939,25 +935,27 @@ body.students-active {
 
 .library__span {
   display: inline-block;
-  -webkit-animation: flip 2s infinite;
-          animation: flip 2s infinite;
-  -webkit-animation-delay: calc(.2s * var(--i));
-          animation-delay: calc(.2s * var(--i));
-}
-
-@-webkit-keyframes flip {
-  0%,
-  80% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
   }
 }
 
 @keyframes flip {
-  0%,
-  80% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+
+
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+    opacity: 0.8;
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+
   }
 }
 
@@ -1058,10 +1056,6 @@ body.students-active {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .library__div {
-    margin-left: 71px;
-    margin-right: 71px;
-  }
   .library__name {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1128,9 +1122,37 @@ body.students-active {
 }
 
 .lib-gallery__list {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   grid-row-gap: 30px;
-  margin: 20px auto 40px auto;
+  padding: 20px 40px 40px 40px;
   max-width: 280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .lib-gallery__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto max-content;
+        grid-template-columns: auto -webkit-max-content;
+        grid-template-columns: auto max-content;
+    padding: 50px 60px 60px 60px;
+    max-width: 616px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .lib-gallery__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto max-content;
+        grid-template-columns: auto auto -webkit-max-content;
+        grid-template-columns: auto auto max-content;
+    padding: 60px 100px 50px 100px;
+    max-width: 882px;
+  }
 }
 
 .lib-gallery__image {
@@ -1139,17 +1161,45 @@ body.students-active {
   margin-bottom: 10px;
   margin-top: 20px;
   width: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.lib-gallery__image:hover {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-box-shadow: 13px 9px 20px -4px #828282;
+          box-shadow: 13px 9px 20px -4px #828282;
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+    opacity: 0.8;
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
 .lib-gallery__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 280px;
+  width: 280px;
+  height: 443px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .lib-gallery__desc {
@@ -1181,30 +1231,12 @@ body.students-active {
 }
 
 @media screen and (min-width: 768px) {
-  .lib-gallery__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin: 50px auto 60px auto;
-    max-width: 616px;
-  }
   .lib-gallery__image {
     height: 398px;
     width: 294px;
   }
   .lib-gallery__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
     max-width: 294px;
   }
   .lib-gallery__title {
@@ -1213,30 +1245,12 @@ body.students-active {
 }
 
 @media screen and (min-width: 1024px) {
-  .lib-gallery__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin: 60px auto 50px auto;
-    max-width: 882px;
-  }
   .lib-gallery__image {
     height: 398px;
     width: 274px;
   }
   .lib-gallery__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
     max-width: 274px;
   }
 }
@@ -1251,6 +1265,7 @@ body.students-active {
   line-height: 1.333;
   padding: 0;
   width: 40px;
+  margin: 5px;
 }
 
 .box:hover {
@@ -1264,7 +1279,7 @@ body.students-active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 40px;
+  margin: 10px auto 10px;
 }
 
 .pagination_buttons {
@@ -1296,7 +1311,7 @@ body.students-active {
 
 @media screen and (min-width: 768px) {
   .pagination {
-    margin-bottom: 60px;
+    margin: 10px auto 10px;
   }
   .pagination_hider {
     -webkit-box-align: baseline;

@@ -7,16 +7,13 @@
         margin-bottom: 20px;
     }
 
-    &-picture {
-        width: 280px;
-        height: 398px;
-        border-radius: 5px;
-    }
+
 
     &-img {
         width: 280px;
         height: 398px;
         border-radius: 5px;
+        object-fit: cover;
 
         &:hover {
             animation-name: pulse;
@@ -66,15 +63,12 @@
 @media screen and (min-width: 768px) {
     .movie {
         &-card {
-            width: 239px;
+            width: 293px;
             height: 439px;
             margin: 0;
         }
 
-        &-picture {
-            width: 293px;
-            height: 398px;
-        }
+
 
         &-img {
             width: 293px;
@@ -93,9 +87,7 @@
             width: 274px;
         }
 
-        &-picture {
-            width: 274px;
-        }
+
 
         &-img {
             width: 274px;

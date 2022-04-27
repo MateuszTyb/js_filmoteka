@@ -1,14 +1,16 @@
 .gallery {
   grid-row-gap: 30px;
-  margin: 20px auto 40px auto;
+  padding: 20px 40px 40px 40px;
   max-width: 280px;
+  margin: 0 auto;
+  background-color: $main-color;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .gallery {
     display: grid;
-    grid-template-columns: auto auto;
-    margin: 50px auto 60px auto;
+    grid-template-columns: auto max-content;
+    padding: 50px 60px 60px 60px;
     max-width: 616px;
   }
 }
@@ -16,8 +18,8 @@
 @media screen and (min-width: 1024px) {
   .gallery {
     display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 60px auto 50px auto;
+    grid-template-columns: auto auto max-content;
+    padding: 60px 100px 50px 100px;
     max-width: 882px;
   }
 }
