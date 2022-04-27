@@ -649,6 +649,29 @@ li {
   left: 50%;
 }
 
+#topBtn {
+  font-family: "Roboto", sans-serif;
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-color: #ff6b08;
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#topBtn:hover {
+  background-color: #ff6b08;
+  opacity: 1;
+}
+
 .container-header {
   margin-top: 0;
   padding: 0;
@@ -935,12 +958,13 @@ body.students-active {
 
 .library__span {
   display: inline-block;
-  }
+  -webkit-animation: flip 2s;
+          animation: flip 2s;
+  -webkit-animation-delay: calc(.5s * var(--i));
+          animation-delay: calc(.5s * var(--i));
 }
 
-@keyframes flip {
-
-
+@-webkit-keyframes flip {
   0% {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
@@ -955,7 +979,24 @@ body.students-active {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
     opacity: 1;
+  }
+}
 
+@keyframes flip {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+    opacity: 0.8;
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
   }
 }
 
