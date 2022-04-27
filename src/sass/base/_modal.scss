@@ -45,7 +45,7 @@
 .arrow {
   position: absolute;
   cursor: pointer;
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 1px -1px 0 1px #ff6b01 inset;
   -webkit-box-shadow: 2px -2px #ff6b01 inset;
   border: solid transparent;
@@ -214,6 +214,14 @@
     padding: 30px 30px;
   }
 
+  .modal__prev-btn {
+    left: -10%;
+  }
+  
+  .modal__next-btn {
+    right: -10%;
+  }
+
   .modal__movie-info {
     margin-left: 32px;
   }
@@ -252,6 +260,14 @@
     max-height: 5628px;
     overflow-y: unset;
     display: flex;
+  }
+
+  .modal__prev-btn {
+    left: -10%;
+  }
+  
+  .modal__next-btn {
+    right: -10%;
   }
 
   .modal__movie-info {

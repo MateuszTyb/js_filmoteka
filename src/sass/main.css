@@ -68,7 +68,7 @@ li {
 .arrow {
   position: absolute;
   cursor: pointer;
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 1px -1px 0 1px #ff6b01 inset;
   -webkit-box-shadow: 2px -2px #ff6b01 inset;
   border: solid transparent;
@@ -274,6 +274,12 @@ li {
     display: flex;
     padding: 30px 30px;
   }
+  .modal__prev-btn {
+    left: -10%;
+  }
+  .modal__next-btn {
+    right: -10%;
+  }
   .modal__movie-info {
     margin-left: 32px;
   }
@@ -312,6 +318,12 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .modal__prev-btn {
+    left: -10%;
+  }
+  .modal__next-btn {
+    right: -10%;
   }
   .modal__movie-info {
     margin-left: 30px;
@@ -923,31 +935,12 @@ body.students-active {
 
 .library__span {
   display: inline-block;
-  -webkit-animation: flip 2s;
-          animation: flip 2s;
-  -webkit-animation-delay: calc(.5s * var(--i));
-          animation-delay: calc(.5s * var(--i));
-}
-
-@-webkit-keyframes flip {
-  0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: scale3d(1.5, 1.5, 1.5);
-            transform: scale3d(1.5, 1.5, 1.5);
-    opacity: 0.8;
-  }
-  to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    opacity: 1;
   }
 }
 
 @keyframes flip {
+
+
   0% {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
@@ -962,6 +955,7 @@ body.students-active {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
     opacity: 1;
+
   }
 }
 
