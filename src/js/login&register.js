@@ -1,8 +1,10 @@
+/*jshint scripturl:true*/
+
 //REFS
 let userlinks = document.getElementById('userlink');
 let signoutlink = document.getElementById('signoutlink');
 var currentUser = null;
-let header = document.getElementById('hh');
+
 // Functions
 function getUsername() {
   let keepLoggedIn = localStorage.getItem('keepLoggedIn');
@@ -36,7 +38,6 @@ window.onload = function() {
   }
   else {
     userlinks.innerText = currentUser.username;
-    header.innerText = "Witaj " + currentUser.fullname;
     userlinks.classList.replace("btn", "nav-link" );
     userlinks.classList.remove("btn-primary");
     userlinks.href = "#";
@@ -46,5 +47,4 @@ window.onload = function() {
     signoutlink.classList.remove("btn-sucess");
     signoutlink.href = "javascript:Signout()";
   }
-
 };

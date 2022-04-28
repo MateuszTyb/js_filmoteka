@@ -71,16 +71,16 @@
       }
       else {
         alert("uzytkownik nie istnieje");
+        }
       }
-    }
     else {
       alert("nick albo haslo jest nie prawidlowe")
-    }
-  });
+      }
+    });
   }
   // Decript process
 
-  function decPass(){
+  function decPass(dbpass){
     var pass12 = CryptoJS.AES.deccrypt(dbpass, pass.value);
     return pass12.toString(CryptoJS.enc.Utf8);
 }
