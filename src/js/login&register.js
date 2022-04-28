@@ -1,3 +1,4 @@
+/*jshint scripturl:true*/
 //REFS
 let userlinks = document.getElementById('userlink');
 let signoutlink = document.getElementById('signoutlink');

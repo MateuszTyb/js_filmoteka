@@ -13,7 +13,7 @@
   refs.modal.addEventListener('click', toggleModal);
   refs.modalWindow.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
-  
+
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       refs.modal.classList.add("is-hidden");
@@ -22,10 +22,10 @@
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
-  };
+  }
 
 
-  let currentCard
+  let currentCard;
   refs.galleryMovie.addEventListener('click', (e) => {
       currentCard = e.target.parentNode.parentNode;
   });
@@ -43,7 +43,7 @@
 
   refs.prevBtn.addEventListener('click', () => {
     currentCard.previousElementSibling.firstElementChild.firstElementChild.click();
-    toggleModal();;
+    toggleModal();
   });
 
   refs.nextBtn.addEventListener('click', () => {
