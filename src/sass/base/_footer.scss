@@ -1,8 +1,9 @@
 .footer {
   align-items: center;
+  font-family: $main-font;
   background-color: $footer-bg;
   display: flex;
-  height: 100px;
+  height: 150px;
   justify-content: center;
   width: 100%;
 
@@ -19,10 +20,33 @@
     margin-top: 10px;
   }
 
+  &__goit {
+
+    display: flexbox;
+    max-width: 100%;
+    height: 15px;
+  }
+
+
   &_icon {
     margin-left: 10px;
     margin-right: 10px;
+    animation: pulse 1s infinite;
   }
+
+  @keyframes pulse {
+    10% {
+      transform: scale(1.3)
+    }
+  }
+
+  @keyframes pulsecolor {
+    10% {
+      background: #dd0000
+    }
+  }
+
+
 
   &_first,
   &_second,
@@ -34,7 +58,7 @@
   }
 
   &_link {
-    text-decoration: underline;
+
 
     &:hover,
     &:focus {
