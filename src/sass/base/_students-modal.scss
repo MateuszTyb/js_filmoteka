@@ -53,6 +53,10 @@
       position: relative;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
+      &-list__item {
+        margin-bottom: 10px;
+      }
+
       h2 {
         font-family: $main-font;
         display: flex;
@@ -70,7 +74,7 @@
 
       &__goit {
 
-        height: 65px;
+        height: 30px;
         max-width: 100%;
         display: flex;
         margin-right: 20px;
@@ -80,12 +84,21 @@
 
       &-picture {
         border: #ffffff;
+        object-fit: cover;
         border-radius: 50%;
         width: 70px;
         height: 70px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
 
+      }
+
+      &-picture:hover,
+      &-picture:focus {
+        background-color: lightblue;
+        border-radius: 5%;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       &-name {
@@ -220,6 +233,15 @@
           margin-bottom: 15px;
         }
 
+        &__goit {
+
+          height: 50px;
+          max-width: 100%;
+          display: flex;
+          margin-right: 20px;
+
+        }
+
         &-list {
           display: flex;
           justify-content: space-between;
@@ -282,6 +304,14 @@
           letter-spacing: 0.1em;
           line-height: 25px;
           margin-bottom: 15px;
+        }
+
+        &__goit {
+
+          height: 65px;
+          max-width: 100%;
+          display: flex;
+          margin-right: 20px;
         }
 
         &-list {
