@@ -5,8 +5,8 @@
   "main": "/index.js",
   "homepage": "https://github.com/MateuszTyb/js_filmoteka",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --out-dir docs --public-url /js_filmoteka/"
+    "dev": "parcel *.html",
+    "build": "parcel build *.html --out-dir docs --public-url /js_filmoteka/"
   },
   "repository": {
     "type": "git",
