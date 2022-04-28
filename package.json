@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "homepage": "https://github.com/MateuszTyb/js_filmoteka",
   "scripts": {
-     "dev": "parcel src/*.html",
+    "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /js_filmoteka/",
     "predeploy": "npm run build -- --public-url /js_filmoteka/",
     "deploy": "gh-pages -d dist"
