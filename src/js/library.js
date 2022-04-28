@@ -4,7 +4,7 @@ const buttonWatched = document.querySelector("#btn-watched");
 const buttonQueue = document.querySelector("#btn-queue");
 const info = document.querySelector(".start-info");
 const div = document.querySelector(".start");
-const list = document.createElement("ul");
+const list = document.createElement("div");
 list.classList.add("lib-gallery__list");
 
 const imgURL = "https://image.tmdb.org/t/p/w500/";
@@ -18,10 +18,10 @@ function renderMyOneMovie(movie) {
   }
   let myGenre = genres.map((genre) => genre.name).join(", ");
   list.innerHTML += `
-          <li class="lib-gallery__item"><img class="lib-gallery__image" id="${id}" src="${imgURL}${poster_path}" alt="${original_title}" />
+          <div class="lib-gallery__item"><img class="lib-gallery__image" id="${id}" src="${imgURL}${poster_path}" alt="${original_title}" />
             <p class="lib-gallery__title">${original_title}</p>
             <p class="lib-gallery__desc">${myGenre} | ${year}</p>
-          </li>`;
+          </div>`;
 }
 
 function renderLibMovies(movieId) {

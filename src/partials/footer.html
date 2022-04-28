@@ -1,6 +1,6 @@
 <section class="footer">
   <div class="footer_info">
-    <p class="footer_first">© 2020 | All Rights Reserved |</p>
+    <p class="footer_first">© 2022 | All Rights Reserved |</p>
     <div class="footer_style">
       <p class="footer_second">Developed with</p>
       <svg class="footer_icon" width="13" height="12">
@@ -8,8 +8,37 @@
       </svg>
       <p class="footer_third">
         by
-        <span class="footer_link" id="students-modal">GoIT Students</span>
+
+        <span class="footer_link" id="students-modal">
+          <img class="footer__goit" src="/images/goitlogo.png" alt="goit" />
+          Students</span
+        >
       </p>
     </div>
   </div>
+
+  <button onclick="topFunction()" id="topBtn">Top</button>
+
+  <script>
+    mybutton = document.getElementById("topBtn");
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </section>
