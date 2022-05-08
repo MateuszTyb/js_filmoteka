@@ -1,88 +1,74 @@
 .box {
-  background-color: #fff;
-  border-radius: 5px;
-  border: 0px;
-  font-size: 12px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 1.333;
-  padding: 0;
-  width: 40px;
-  margin: 5px;
-
-
-  &:hover {
-    cursor: pointer;
-  }
+    background-color: $main-color;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 12px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 1.333;
+    padding: 0;
+    width: 40px;
+    margin: 5px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto 10px;
-
-  &_buttons {
     display: flex;
     justify-content: center;
-  }
-
-  &_current-page {
-    background-color: $details-color;
-    border-radius: 5px;
-    color: $main-color;
-
-    &:hover {
-      cursor: initial;
+    margin: 10px auto 10px;
+    &_buttons {
+        display: flex;
+        justify-content: center;
     }
-  }
-
-  &_hider,
-  &_first-page,
-  &_last-page {
-    display: none;
-  }
-
-  &_right,
-  &_left {
-    background: #f7f7f7;
-  }
+    &_current-page {
+        background-color: $details-color;
+        border-radius: 5px;
+        color: $main-color;
+        &:hover {
+            cursor: initial;
+        }
+    }
+    &_hider,
+    &_first-page,
+    &_last-page {
+        display: none;
+    }
+    &_right,
+    &_left {
+        background: $footer-bg;
+    }
 }
 
 @media screen and (min-width: 768px) {
-  .pagination {
-    margin: 10px auto 10px;
-
-    &_hider {
-      align-items: baseline;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-
-      &:hover {
-        cursor: initial;
-      }
+    .pagination {
+        margin: 10px auto 10px;
+        &_hider {
+            align-items: baseline;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            &:hover {
+                cursor: initial;
+            }
+        }
+        &_dots {
+            margin-top: 8px;
+        }
+        &_first-page {
+            visibility: hidden;
+        }
+        &_hider-first {
+            visibility: hidden;
+        }
+        &_first-page,
+        &_last-page {
+            display: inline-block;
+        }
+        &_less-two,
+        &_less-one {
+            visibility: hidden;
+        }
     }
-
-    &_dots {
-      margin-top: 8px;
-    }
-
-    &_first-page {
-      visibility: hidden;
-    }
-
-    &_hider-first {
-      visibility: hidden;
-    }
-
-    &_first-page,
-    &_last-page {
-      display: inline-block;
-    }
-
-    &_less-two,
-    &_less-one {
-      visibility: hidden;
-    }
-  }
 }
