@@ -73,8 +73,8 @@ html {
   position: absolute;
   cursor: pointer;
   padding: 2rem;
-  box-shadow: 1px -1px 0 1px #ff6b01 inset;
-  -webkit-box-shadow: 2px -2px #ff6b01 inset;
+  box-shadow: 1px -1px 0 1px #ff6b08 inset;
+  -webkit-box-shadow: 2px -2px #ff6b08 inset;
   border: solid transparent;
   border-width: 0 0 2rem 2rem;
   -webkit-transition: 0.2s;
@@ -82,8 +82,8 @@ html {
 }
 
 .arrow:hover {
-  box-shadow: 2px -2px 0 2px #fff inset;
-  -webkit-box-shadow: 4px -4px #fff inset;
+  box-shadow: 2px -2px 0 2px #ffffff inset;
+  -webkit-box-shadow: 4px -4px #ffffff inset;
 }
 
 .arrow-up {
@@ -207,7 +207,7 @@ html {
 }
 
 .vote {
-  background: #ff6b01;
+  background: #ff6b08;
   border-radius: 5px;
   margin: 0;
   padding-left: 10px;
@@ -250,7 +250,7 @@ html {
   width: 112.58px;
   height: 44px;
   cursor: pointer;
-  background: #FFF;
+  background: #ffffff;
 }
 
 .modal__buttons {
@@ -664,7 +664,7 @@ html {
   outline: none;
   background-color: #ff6b08;
   opacity: 0.8;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
@@ -1088,7 +1088,7 @@ body.students-active {
 
 .library__button:hover, .library__button:focus {
   cursor: pointer;
-  background: #ff6b01;
+  background: #ff6b08;
   border: transparent;
 }
 
@@ -1157,7 +1157,7 @@ body.students-active {
       -ms-flex-align: center;
           align-items: center;
   color: #ff001b;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.17;
@@ -1301,7 +1301,7 @@ body.students-active {
 }
 
 .box {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 5px;
   border: 0px;
   font-size: 12px;
@@ -1447,13 +1447,13 @@ body.students-active {
 
 @-webkit-keyframes pulsecolor {
   10% {
-    background: #dd0000;
+    background: #ff001b;
   }
 }
 
 @keyframes pulsecolor {
   10% {
-    background: #dd0000;
+    background: #ff001b;
   }
 }
 
@@ -1535,7 +1535,7 @@ body.students-active {
 #students-container .students-background .students {
   max-width: 300px;
   max-height: 95%;
-  background-color: white;
+  background-color: #ffffff;
   padding: 10px;
   margin: auto;
   display: block;
@@ -1605,7 +1605,7 @@ body.students-active {
   font-size: 20px;
   line-height: 24px;
   color: #ff6b08;
-  text-shadow: 1px 1px 2px white;
+  text-shadow: 1px 1px 2px #ffffff;
 }
 
 #students-container .students-background .students-position {
@@ -1615,7 +1615,7 @@ body.students-active {
   line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
-  color: black;
+  color: #000000;
 }
 
 #students-container .students-background .students-social {
@@ -1640,8 +1640,8 @@ body.students-active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  fill: black;
-  color: black;
+  fill: #000000;
+  color: #000000;
   background-color: #ff6b08;
   margin-bottom: 10px;
   width: 44px;
@@ -1654,7 +1654,7 @@ body.students-active {
   background-color: lightblue;
   fill: #ff6b08;
   color: #ff6b08;
-  background-color: black;
+  background-color: #000000;
   -webkit-transition: color fill background-color;
   transition: color fill background-color;
   -webkit-transition-duration: 250ms;
@@ -1776,7 +1776,7 @@ body.students-active {
   }
   #students-container .students-background .students {
     max-width: 740px;
-    background-color: white;
+    background-color: #ffffff;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -1859,7 +1859,7 @@ body.students-active {
   }
   #students-container .students-background .students {
     max-width: 900px;
-    background-color: white;
+    background-color: #ffffff;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;

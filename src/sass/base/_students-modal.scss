@@ -1,348 +1,297 @@
 #students-container {
-  position: fixed;
-  display: table;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: scale(0);
-  z-index: 1;
-
-  &.visible {
-    transform: scaleY(0.01) scaleX(0);
-    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-
-    .students-background {
-      .students {
-        transform: scale(0);
-        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-      }
-    }
-
-    &.unvisible {
-      transform: scale(1);
-      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-
-      .students-background {
-        .students {
-          animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 1;
+    &.visible {
+        transform: scaleY(0.01) scaleX(0);
+        animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        .students-background {
+            .students {
+                transform: scale(0);
+                animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            }
         }
-      }
+        &.unvisible {
+            transform: scale(1);
+            animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            .students-background {
+                .students {
+                    animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+                }
+            }
+        }
     }
-  }
-
-
-
-
-
-  .students-background {
-    display: table-cell;
-    background: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    vertical-align: middle;
-
-    .students {
-      max-width: 300px;
-      max-height: 95%;
-      background-color: white;
-      padding: 10px;
-      margin: auto;
-      display: block;
-      border-radius: 3px;
-      font-weight: 300;
-      position: relative;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
-      &-list__item {
-        margin-bottom: 10px;
-      }
-
-      h2 {
-        font-family: $main-font;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 0.1em;
-        height: 60px;
-        font-family: $main-font;
-        font-size: 30px;
-        line-height: 25px;
-        margin-bottom: 15px;
-
-
-      }
-
-      &__goit {
-
-        height: 30px;
-        max-width: 100%;
-        display: flex;
-        margin-right: 20px;
-
-      }
-
-
-      &-picture {
-        border: #ffffff;
-        object-fit: cover;
-        border-radius: 50%;
-        width: 70px;
-        height: 70px;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
-
-      }
-
-      &-picture:hover,
-      &-picture:focus {
-        background-color: lightblue;
-        border-radius: 5%;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      &-name {
-        margin-bottom: 7px;
-        font-family: $main-font;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 24px;
-        color: $details-color;
-        text-shadow: 1px 1px 2px white;
-      }
-
-      &-position {
-        font-family: $main-font;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.1875;
+    .students-background {
+        display: table-cell;
+        background: rgba(0, 0, 0, 0.8);
         text-align: center;
-        letter-spacing: 0.03em;
-        color: black;
-      }
-
-      &-social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      &-social-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        fill: black;
-        color: black;
-        background-color: #ff6b08;
-        margin-bottom: 10px;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        margin: 16px 5px 0px;
-      }
-
-      &-social-links:hover,
-      &-social-links:focus {
-        background-color: lightblue;
-        fill: #ff6b08;
-        color: #ff6b08;
-        background-color: black;
-        transition: color fill background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      }
+        vertical-align: middle;
+        .students {
+            max-width: 300px;
+            max-height: 95%;
+            background-color: $main-color;
+            padding: 10px;
+            margin: auto;
+            display: block;
+            border-radius: 3px;
+            font-weight: 300;
+            position: relative;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            &-list__item {
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-family: $main-font;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.1em;
+                height: 60px;
+                font-family: $main-font;
+                font-size: 30px;
+                line-height: 25px;
+                margin-bottom: 15px;
+            }
+            &__goit {
+                height: 30px;
+                max-width: 100%;
+                display: flex;
+                margin-right: 20px;
+            }
+            &-picture {
+                border: $main-color;
+                object-fit: cover;
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            }
+            &-picture:hover,
+            &-picture:focus {
+                background-color: $students-bg;
+                border-radius: 5%;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            &-name {
+                margin-bottom: 7px;
+                font-family: $main-font;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 24px;
+                color: $details-color;
+                text-shadow: 1px 1px 2px $main-color;
+            }
+            &-position {
+                font-family: $main-font;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.1875;
+                text-align: center;
+                letter-spacing: 0.03em;
+                color: $secondary-color;
+            }
+            &-social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &-social-links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                fill: $secondary-color;
+                color: $secondary-color;
+                background-color: $details-color;
+                margin-bottom: 10px;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                margin: 16px 5px 0px;
+            }
+            &-social-links:hover,
+            &-social-links:focus {
+                background-color: $students-bg;
+                fill: $details-color;
+                color: $details-color;
+                background-color: $secondary-color;
+                transition: color fill background-color;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
     }
-  }
 }
 
 @keyframes unfoldIn {
-  0% {
-    transform: scaleY(0.005) scaleX(0);
-  }
-
-  50% {
-    transform: scaleY(0.005) scaleX(1);
-  }
-
-  100% {
-    transform: scaleY(1) scaleX(1);
-  }
+    0% {
+        transform: scaleY(0.005) scaleX(0);
+    }
+    50% {
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        transform: scaleY(1) scaleX(1);
+    }
 }
 
 @keyframes unfoldOut {
-  0% {
-    transform: scaleY(1) scaleX(1);
-  }
-
-  50% {
-    transform: scaleY(0.005) scaleX(1);
-  }
-
-  100% {
-    transform: scaleY(0.005) scaleX(0);
-  }
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        transform: scaleY(0.005) scaleX(0);
+    }
 }
 
 @keyframes zoomIn {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes zoomOut {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(0);
-  }
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 
 @media screen and (min-width: 768px) {
-  #students-container {
-    .students-background {
-      display: table-cell;
-      background: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      vertical-align: middle;
-
-      .students {
-        max-width: 740px;
-        background-color: white;
-        padding: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        border-radius: 3px;
-        font-weight: 300;
-        position: relative;
-
-        h2 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          letter-spacing: 0.1em;
-          height: 100px;
-          font-size: 50px;
-          line-height: 25px;
-          margin-bottom: 15px;
+    #students-container {
+        .students-background {
+            display: table-cell;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            vertical-align: middle;
+            .students {
+                max-width: 740px;
+                background-color: $main-color;
+                padding: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 3px;
+                font-weight: 300;
+                position: relative;
+                h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 0.1em;
+                    height: 100px;
+                    font-size: 50px;
+                    line-height: 25px;
+                    margin-bottom: 15px;
+                }
+                &__goit {
+                    height: 50px;
+                    max-width: 100%;
+                    display: flex;
+                    margin-right: 20px;
+                }
+                &-list {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &__item {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                &-picture {
+                    border: $main-color;
+                    border-radius: 50%;
+                    width: 140px;
+                    height: 140px;
+                }
+                &-name {
+                    margin-top: 5px;
+                    margin-bottom: 7px;
+                    font-family: $main-font;
+                    font-weight: bold;
+                    font-size: 34px;
+                    line-height: 36px;
+                }
+            }
         }
-
-        &__goit {
-
-          height: 50px;
-          max-width: 100%;
-          display: flex;
-          margin-right: 20px;
-
-        }
-
-        &-list {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-
-          &__item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-        }
-
-        &-picture {
-          border: #ffffff;
-          border-radius: 50%;
-          width: 140px;
-          height: 140px;
-        }
-
-        &-name {
-          margin-top: 5px;
-          margin-bottom: 7px;
-          font-family: $main-font;
-          font-weight: bold;
-          font-size: 34px;
-          line-height: 36px;
-
-        }
-      }
     }
-  }
 }
 
 @media screen and (min-width: 1024px) {
-  #students-container {
-    .students-background {
-      display: table-cell;
-      background: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      vertical-align: middle;
-
-      .students {
-        max-width: 900px;
-        background-color: white;
-        padding: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        border-radius: 3px;
-        font-weight: 300;
-        position: relative;
-
-        h2 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100px;
-          font-size: 70px;
-          letter-spacing: 0.1em;
-          line-height: 25px;
-          margin-bottom: 15px;
+    #students-container {
+        .students-background {
+            display: table-cell;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            vertical-align: middle;
+            .students {
+                max-width: 900px;
+                background-color: $main-color;
+                padding: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 3px;
+                font-weight: 300;
+                position: relative;
+                h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100px;
+                    font-size: 70px;
+                    letter-spacing: 0.1em;
+                    line-height: 25px;
+                    margin-bottom: 15px;
+                }
+                &__goit {
+                    height: 65px;
+                    max-width: 100%;
+                    display: flex;
+                    margin-right: 20px;
+                }
+                &-list {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &__item {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                &-picture {
+                    border: $main-color;
+                    border-radius: 50%;
+                    width: 170px;
+                    height: 170px;
+                }
+                &-name {
+                    margin-top: 5px;
+                    margin-bottom: 7px;
+                    font-family: $main-font;
+                    font-weight: bold;
+                    font-size: 34px;
+                    line-height: 36px;
+                }
+            }
         }
-
-        &__goit {
-
-          height: 65px;
-          max-width: 100%;
-          display: flex;
-          margin-right: 20px;
-        }
-
-        &-list {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-
-          &__item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-        }
-
-        &-picture {
-          border: #ffffff;
-          border-radius: 50%;
-          width: 170px;
-          height: 170px;
-        }
-
-        &-name {
-          margin-top: 5px;
-          margin-bottom: 7px;
-          font-family: $main-font;
-          font-weight: bold;
-          font-size: 34px;
-          line-height: 36px;
-        }
-      }
     }
-  }
 }
